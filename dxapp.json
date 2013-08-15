@@ -1,0 +1,22 @@
+{
+  "name": "tag-bam-from-header",
+  "title": "Set properties of a BAM file using its header",
+  "summary": "Applies properties to a file in DNANexus using fields from its BAM header",
+  "dxapi": "1.0.0",
+  "version": "0.0.1",
+  "inputSpec": [
+    {
+      "name": "bamfile",
+      "label": "BAM file of interest",
+      "class": "file",
+      "optional": false
+    }
+  ],
+  "outputSpec": [],
+  "runSpec": {
+    "interpreter": "bash",
+    "file": "src/tag-bam-from-header.sh",
+    "execDepends": [
+        {"name": "samtools"}]
+  }
+}
